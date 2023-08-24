@@ -14,3 +14,9 @@
   <Route path="/shop" element={<Shop/>}/>
 </Routes>
 ```
+
+
+#### Link: when we will click the Link element it works like a button and it will navigate use to a path
+```
+<Link to="/about">About</Link>
+```
