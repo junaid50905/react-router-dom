@@ -16,7 +16,44 @@
 ```
 
 
-#### Link: when we will click the Link element it works like a button and it will navigate use to a path
+#### Link: When we click the Link element it works like a button and it will navigate us to a path
 ```
 <Link to="/about">About</Link>
 ```
+
+#### NavLink: We will use this as a nav item of navigation
+We can use it Bootstrap nav
+```
+<nav>
+  <NavLink to="/" className="nav-link active">Home</NavLink>
+  <NavLink to="/about" className="nav-link">About</NavLink>
+  <NavLink to="/shop" className="nav-link">Shop</NavLink>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
