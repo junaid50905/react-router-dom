@@ -223,6 +223,10 @@ export default HostLayout
 
 ```
 
+- What is the index route?
+
+  It is the default route
+
 
 
 
