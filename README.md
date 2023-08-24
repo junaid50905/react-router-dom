@@ -181,16 +181,47 @@ after nested route
 ```
 ##### NOTE: but do not need to write only for two routes
 
-##### questions on nested route:
+##### questions on the nested route:
+
 - Why we will use nested route?
-    . when we have shared route then we use nested route
+  
+    when we have a shared route then we can use nested route
     ```
       <Route path="host" element={<Dashboard/>>} />
-      <Route path="host" element={<Dashboard/>>} />
-      <Route path="host" element={<Dashboard/>>} />
+      <Route path="host/income" element={<Income/>>} />
+      <Route path="host/reviews" element={<Reviews/>>} />
+
+      <Route path="host" element={<HostLayout/>}>
+        <Route index element={<Dashboard/>}/>
+        <Route path="income" element={<Income/>}/>
+        <Route path="reviews" element={<Reviews/>}/>
+      </Route>
+      
     ```
   
+- What is the Layout route?
+  
+  It is the parent route of some nested routes Link
+  
+HostLayout.jsx
+```
+import { Link,Outlet } from 'react-router-dom';
 
+const HostLayout = () => {
+  return (
+    <div>
+          <Link to="/host">Dashboard</Link><br />
+          <Link to="/host/income">income</Link><br />
+          <Link to="/host/reviews">reviews</Link><br />
+          <hr />
+          <Outlet />
+    </div>
+  )
+}
+
+export default HostLayout
+
+```
 
 
 
