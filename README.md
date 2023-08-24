@@ -43,9 +43,8 @@ Routes
 ```
 
 ProductDetailed.jsx
-<img src="https://i.ibb.co/q1NFV6F/Product-detailed.png" alt="Product-detailed" border="0" height="300" width="300">
 
-
+<a href="https://ibb.co/q1NFV6F"><img src="https://i.ibb.co/q1NFV6F/Product-detailed.png" alt="Product-detailed" border="0"></a>
 
 
 
