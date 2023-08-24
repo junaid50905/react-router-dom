@@ -50,6 +50,66 @@ ProductDetailed.jsx
 #### Nested Routes
 <a href="https://ibb.co/BqJ5zL2"><img src="https://i.ibb.co/BqJ5zL2/nested-routing.png" alt="nested-routing" border="0"></a>
 
+here, we making a nested routes for host
+
+
+Navbar.jsx
+```
+import {Link} from "react-router-dom"
+
+const Navbar = () => {
+  return (
+    <nav>
+      <Link to="/">Home</Link><br />
+      <Link to="/host">Host</Link><br />
+      <Link to="/team">Team</Link><br />
+      <Link to="/profile">Profile</Link><br />
+      <hr />
+    </nav>
+  )
+}
+
+export default Navbar
+
+```
+
+
+App.jsx
+```
+<>
+  <Navbar/>
+  <Routes>
+    <Route path="/host" element={<HostLayout/>}>
+      <Route path="/host" element={<Dashboard/>}/>
+      <Route path="/host/income" element={<Income/>}/>
+      <Route path="/host/reviews" element={<Reviews/>}/>
+    </Route>
+  </Routes>
+</>
+```
+
+HostLayout.jsx
+```
+import { Link,Outlet } from 'react-router-dom';
+
+const HostLayout = () => {
+  return (
+    <div>
+          <Link to="/host">Dashboard</Link><br />
+          <Link to="/host/income">income</Link><br />
+          <Link to="/host/reviews">reviews</Link><br />
+          <hr />
+          <Outlet />
+    </div>
+  )
+}
+
+export default HostLayout
+
+```
+
+when we click host from the Navbar then go to the /host route and this host route will call Dashboard component as default
+
 
 
 
