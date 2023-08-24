@@ -47,7 +47,8 @@ ProductDetailed.jsx
 <a href="https://ibb.co/q1NFV6F"><img src="https://i.ibb.co/q1NFV6F/Product-detailed.png" alt="Product-detailed" border="0"></a>
 
 
-#### Nested Routes
+## Nested Routes
+
 <a href="https://ibb.co/BqJ5zL2"><img src="https://i.ibb.co/BqJ5zL2/nested-routing.png" alt="nested-routing" border="0"></a>
 
 here, we making a nested routes for host
@@ -111,7 +112,37 @@ export default HostLayout
 when we click host from the Navbar then go to the /host route and this host route will call Dashboard component as default
 
 
+#### Relative path
 
+
+App.jsx (before relative path)
+```
+<>
+  <Navbar/>
+  <Routes>
+    <Route path="/host" element={<HostLayout/>}>
+      <Route path="/host" element={<Dashboard/>}/>
+      <Route path="/host/income" element={<Income/>}/>
+      <Route path="/host/reviews" element={<Reviews/>}/>
+    </Route>
+  </Routes>
+</>
+```
+
+App.jsx (after relative path)
+```
+<>
+  <Navbar/>
+  <Routes>
+    <Route path="host" element={<HostLayout/>}>
+      <Route path="host" element={<Dashboard/>}/>
+      <Route path="income" element={<Income/>}/>
+      <Route path="reviews" element={<Reviews/>}/>
+    </Route>
+  </Routes>
+</>
+```
+here, host is the parent path so we don't need to write the host again. income and reviews route will work but Dashboard will not work. through the next topic, we will learn how it works.
 
 
 
