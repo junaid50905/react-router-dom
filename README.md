@@ -160,6 +160,26 @@ here, host is the parent path so we don't need to write the host again. income a
 </>
 ```
 
+#### Suppose we have products and product detailed routes then how we will make it a nested route
+
+before nested route
+```
+<>
+    <Route path="products" element={<Products/>}/>
+    <Route path="product/:id" element={<ProductDetailed/>}/>
+</>
+```
+
+after nested route
+```
+<>
+<Route path="products">
+    <Route index element={<Products/>}/>
+    <Route path=":id" element={<ProductDetailed/>}/>
+</Route>
+</>
+```
+
 
 
 
