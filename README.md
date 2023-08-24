@@ -43,6 +43,7 @@ Routes
 ```
 
 ProductDetailed.jsx
+<a href="https://ibb.co/q1NFV6F"><img src="https://i.ibb.co/q1NFV6F/Product-detailed.png" alt="Product-detailed" border="0"></a>
 
 
 
