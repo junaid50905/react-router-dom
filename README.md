@@ -250,6 +250,8 @@ export default HostLayout
 
 ```
 
+### Make a multiple navbar route with active navbar item
+
 
 
 
