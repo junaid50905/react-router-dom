@@ -179,6 +179,7 @@ after nested route
 </Route>
 </>
 ```
+##### NOTE: but do not need to write only for two routes
 
 
 
