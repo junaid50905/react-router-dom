@@ -143,7 +143,22 @@ App.jsx (after relative path)
   </Routes>
 </>
 ```
-here, host is the parent path so we don't need to write the host again. income and reviews route will work but Dashboard will not work. through the next topic, we will learn how it works.
+here, host is the parent path so we don't need to write the host again. income and reviews route will work but Dashboard will not work. through the index route we will learn it
+
+#### index route
+
+```
+<>
+  <Navbar/>
+  <Routes>
+    <Route path="host" element={<HostLayout/>}>
+      <Route index element={<Dashboard/>}/>
+      <Route path="income" element={<Income/>}/>
+      <Route path="reviews" element={<Reviews/>}/>
+    </Route>
+  </Routes>
+</>
+```
 
 
 
