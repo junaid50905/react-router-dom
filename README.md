@@ -181,6 +181,15 @@ after nested route
 ```
 ##### NOTE: but do not need to write only for two routes
 
+##### questions on nested route:
+- Why we will use nested route?
+    . when we have shared route then we use nested route
+    ```
+      <Route path="host" element={<Dashboard/>>} />
+      <Route path="host" element={<Dashboard/>>} />
+      <Route path="host" element={<Dashboard/>>} />
+    ```
+  
 
 
 
