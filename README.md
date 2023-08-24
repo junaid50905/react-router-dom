@@ -30,6 +30,16 @@ We can use it Bootstrap nav
   <NavLink to="/shop" className="nav-link">Shop</NavLink>
 </nav>
 
+There are several ways to activate a NavLink.
+
+1.
+<a href="https://ibb.co/WgL6spT"><img src="https://i.ibb.co/WgL6spT/active-navlink.png" alt="active-navlink" border="0"></a>
+
+2.
+<a href="https://ibb.co/1qKXt91"><img src="https://i.ibb.co/1qKXt91/active-navlink-2.png" alt="active-navlink-2" border="0"></a>
+
+3. we can do it for bootstrap simply
+
 
 #### Route parameter, pass parameter, getting data according to the parameter
 Shop.jsx
