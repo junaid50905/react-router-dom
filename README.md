@@ -88,6 +88,7 @@ App.jsx
   </Routes>
 </>
 ```
+##### NOTE: nested route er somoy parent("/host" of HostLayout) er nicher content Outlet a show hobe. Outlet ache jekhane nested route er content show hobe sekhane.
 
 HostLayout.jsx
 ```
