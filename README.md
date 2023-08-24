@@ -227,6 +227,16 @@ export default HostLayout
 
   It is the default route
 
+### Create a proper layout of the application
+
+```
+<Header/>
+<main>
+  <Outlet/>
+</main>
+<Footer/>
+
+```
 
 
 
