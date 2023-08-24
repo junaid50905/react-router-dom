@@ -31,6 +31,21 @@ We can use it Bootstrap nav
 </nav>
 
 
+#### Route parameter, pass parameter, getting data according to the parameter
+Shop.jsx
+```
+<Link to={`/shop/${id}`}>Go to product detailed</Link>
+```
+
+Routes
+```
+<Route path="/shop/:id" element={<ProductDetailed/>}/>
+```
+
+ProductDetailed.jsx
+
+
+
 
 
 
