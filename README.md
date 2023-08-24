@@ -29,6 +29,8 @@ We can use it Bootstrap nav
   <NavLink to="/about" className="nav-link">About</NavLink>
   <NavLink to="/shop" className="nav-link">Shop</NavLink>
 </nav>
+```
+
 
 There are several ways to activate a NavLink.
 
