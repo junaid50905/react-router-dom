@@ -42,6 +42,10 @@ There are several ways to activate a NavLink.
 
 3. we can do it for bootstrap simply
 
+4. active multiple navbar item
+
+<a href="https://ibb.co/0V4s19Y"><img src="https://i.ibb.co/0V4s19Y/active-multiple-navlink.png" alt="active-multiple-navlink" border="0"></a>
+
 
 #### Route parameter, pass parameter, getting data according to the parameter
 Shop.jsx
