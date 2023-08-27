@@ -54,6 +54,11 @@ const {product} = useOutletContext()
 
 ### Hooks
 - useParams
+
+```
+const {id} = useParams()
+```
+
 - useSearchParams
 
 It is used to set and get the search parameters
@@ -131,4 +136,36 @@ const About = () => {
 export default About
 ```
 - useOutletContext
+- useLocation
+
+```
+const location = useLocation()
+console.log(location);
+
+hash: ""
+key: "default"
+pathname: "/host/vans/2"
+search: ""
+state: null
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
