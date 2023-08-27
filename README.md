@@ -321,8 +321,11 @@ export default About
 
 
 
+### proper way to call API
 
-
+- create a folder/api.js
+- write api on api.js
+- call the api on your component
 
 
 
