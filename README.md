@@ -243,18 +243,82 @@ export default HostLayout
 
   It is the default route
 
-### Create a proper layout of the application
+### useSearchParams
+```
+import { useEffect, useState } from "react"
+import { Link, NavLink, useSearchParams } from "react-router-dom";
+
+const About = () => {
+  const [products, setProducts] = useState([])
+  const [searchParams, setSearchParams] = useSearchParams()
+  const categoryFilter = searchParams.get('category')
+
+ 
+
+  useEffect(() => {
+    fetch('https://fakestoreapi.com/products')
+      .then(res=> res.json())
+      .then(data=>{
+        setProducts([...products, ...data])
+      })
+  }, []);
+
+ 
+
+  const displayFilterData = categoryFilter ? products.filter((product => product.category === categoryFilter)) : products
+  
+  return (
+    <div className="container">
+      <p>Select by category</p>
+       {/* way 1 */}
+      <Link to={'.'}>all</Link><br />
+      <Link to={'?category=jewelery'}>jewelery</Link><br />
+      <Link to={'?category=electronics'}>electronics</Link><br />
+      {/* way 2 */}
+      <button onClick={()=> setSearchParams("?category=men's clothing")}>men's clothing</button>
+      {/* way 3: this is the better way */}
+      <button onClick={() => setSearchParams({ category: "women's clothing" })}>women's clothing</button>
+
+      
+      
+      
+      {/* <ul>
+        <li>
+          <NavLink exact to={'.'}>all</NavLink><br />
+        </li>
+        <li>
+          <NavLink to={'?category=jewelery'}>jewelery</NavLink><br />
+        </li>
+        <li>
+          <NavLink to={'?category=electronics'}>electronics</NavLink><br />
+        </li>
+      </ul> */}
+      
+   
+      <div className="row">
+        {
+          displayFilterData.map((product, i) => {
+            return (
+              <div key={i} className="col-md-3">
+                <div className="m-2 border p-3">
+                  <img src={product.image} alt="" height={'100'} width={'100'} />
+                  <h4>{product.title}</h4>
+                  <h6 className="text-danger">{product.category}</h6>
+                  <h5>$ {product.price}</h5>
+                </div>
+              </div>
+            )
+          })
+        }
+      </div>
+    </div>
+  )
+}
+
+export default About
 
 ```
-<Header/>
-<main>
-  <Outlet/>
-</main>
-<Footer/>
 
-```
-
-### Make a multiple navbar route with active navbar item
 
 
 
