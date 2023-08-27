@@ -6,6 +6,7 @@
 
 ### Components
 - Routes & Route
+
 path: path of the route <br>
 element: <br>
 index: it is used to indicate the parent path of the nested route<br>
