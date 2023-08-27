@@ -51,6 +51,16 @@ const {product} = useOutletContext()
 - Link
 - NavLink
 
+nested route er kethre parent link ke end rakte hobe nahoy multiple NavLink active thakbe
+```
+<div>
+    <NavLink to={'/host'} end>Dashboard</NavLink>
+</div>
+<div>
+    <NavLink to={'/host/income'}>Income</NavLink>
+</div>
+```
+
 
 ### Hooks
 - useParams
