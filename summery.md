@@ -150,7 +150,29 @@ state: null
 
 ```
 
+we can pass data through <Link> using location instade of useParams
 
+set
+```
+<Link to="/" state={{ product }}/>
+```
+
+get
+```
+const location = useLocation()
+console.log(location);
+
+we will get this type of value:
+hash:""
+key:"jf8tybc5"
+pathname:"/host/vans/1"
+search:""
+state:
+  product: {id: 1, title: 'Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops', price: 109.95, description: 'Your perfect pack for everyday use and walks in th…to 15 inches) in the padded sleeve, your everyday', category: "men's clothing",}
+
+now we can get this like:
+location.state.product.title
+```
 
 
 
